@@ -93,19 +93,22 @@ li {
   &__box-list li + li {
     margin-left: 24px;
   }
-  &__box-link {}
-  &__box-btn {
-    padding: 15px 25px;
-    background-color: #198C36;
-    border-radius: 160px;
-    transition: all .4s;
-    border: 1px solid transparent;
-  }
-  &__box-btn:hover {
-    color: #198C36;
-    background-color: #fefefe;
-    border: 1px solid #198C36;
-  }
+  &__box-link a {
+    color: #FBFAF7;
+  } 
+}
+.btn {
+  padding: 15px 25px;
+  background-color: #198C36;
+  border-radius: 160px;
+  transition: all .4s;
+  border: 1px solid transparent;
+  color: #FBFAF7;
+}
+.btn:hover {
+  color: #198C36;
+  background-color: #FBFAF7;
+  border: 1px solid #198C36;
 }
 
 // header end
@@ -267,7 +270,9 @@ li {
 
 // partners start
 .skils {
-  &__box {}
+  &__box {
+    margin-bottom: 120px;
+  }
   &__box-title{
     text-align: center;
     margin-bottom: 27px;
@@ -287,6 +292,11 @@ li {
     background: #FBFAF7;
     box-shadow: 5px 5px 20px #E9E4D5;
     border-radius: 15px;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  &__box-item:hover{
+    transform: scale(1.25);
   }
   &__box-item ul {
     list-style: inside
@@ -308,3 +318,242 @@ li {
   }
 }
 // partners end
+
+
+
+// price start 
+
+.price {
+  background: #F2EFE6;
+  &__box {
+    padding: 115px 0 125px 0;
+  }
+  &__box-title {
+    text-align: center;
+    margin-bottom: 27px;
+  }
+  &__box-text {
+    text-align: center;
+    color: #163A24;
+    margin-bottom: 60px;
+  }
+  &__box-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__box-item {
+    position: relative;
+    padding-right: 140px;
+    width: 390px;
+  }
+  &__box-item::after{
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 35px;
+    top: 40px;
+    right: 30px;
+    background: url(../img/svg/rowe-top.svg) center no-repeat;
+    background-size: cover;
+  }
+  &__box-item span {
+    display: block;
+    font-family: "Recoleta", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 31px;
+    color: #163A24;
+    padding-left: 68px;
+  }
+  &__box-item-text {
+    width: 260px;
+    text-align: center;
+    color: #163A24;
+    margin-bottom: 13px;
+  }
+  &__box-item-img {
+    padding-left: 80px;
+  }
+  &__box-test {
+    text-align: center;
+  }
+}
+// price end 
+
+
+
+// download start
+
+.download {
+  &__box {
+    padding: 130px 0 135px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__box-desc {
+    padding: 135px 0px 145px 0;
+  }
+  &__box-title {
+    width: 360px;
+    margin-bottom: 25px;
+  }
+  &__box-text {
+    color: #163A24;
+    margin-bottom: 19px;
+  }
+  &__box-btn {}
+}
+
+// download end
+
+
+
+// call start 
+.call {
+  position: relative;
+    background: url(../img/svg/bg-end.svg)  center no-repeat;
+    background-size: cover;
+    padding: 125px 0 115px;
+  &__box {}
+  &__box::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 400px;
+    background: url(../img/svg/bg-left.svg)center no-repeat;
+    background-size: cover;
+  }
+  &__box::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    background: url(../img/svg/bg-right.svg)center no-repeat;
+    background-size: cover;
+  }
+  &__box-title {
+    color: #FBFAF7;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  &__box-text {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  &__box-btn {
+    text-align: center;
+  }
+  &__box-btn-style{
+    color: #163A24;
+    background: #FAB5A0;
+  }
+}  
+// call end
+
+
+
+// form start 
+
+.form {
+  background: #F2EFE6;
+  &__box {
+    padding: 55px 0 74px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  &__box-desc {
+    width: 590px;
+  }
+  &__box-desc-title {
+    margin-bottom: 26px;
+  }
+  &__box-desc-text {
+    color: #163A24;
+  }
+  &__box-form {
+    width: 590px;
+    position: relative;
+  }
+  &__box-form-input { 
+    width: 553px;
+    height: 54px;
+    background: #FFFFFF;
+    border: 1px solid #F2EFE6;
+    border-radius: 255px;
+    margin-bottom: 11px;
+  }
+  &__box-form-btn {
+    position: absolute;
+    right: 10px;
+    padding: 15px 25px;
+    background: #15762E;
+    border: none;
+    border-radius: 160px;
+    color: #FBFAF7;
+  }
+  &__box-form-text {
+    font-size: 14px;
+    line-height: 21px;
+    color: #163A24;
+  }
+  &__box-form-text span a{
+    color: #198C36;
+    padding-left: 13px;
+  }
+}
+
+// form end 
+
+
+
+// footer start 
+
+.footer {
+  &__box {
+    padding: 45px 0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__box-logo {}
+  &__box-text {
+    font-family: "Recoleta", sans-serif;
+    color: #163A24;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  &__box-list {}
+  &__box-link {
+    margin: 7px;
+  }
+  &__box2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 24px;
+    border-top: 1px solid #F2EFE6;
+  }
+  &__box2-text {
+    font-size: 14px;
+    line-height: 21px;
+    color: #163A24;
+  }
+  &__box2-list {}
+  &__box2-link {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 7px;
+  }
+  &__box2-link a{
+    color: #198C36;
+  }
+}
+
+// footer end
